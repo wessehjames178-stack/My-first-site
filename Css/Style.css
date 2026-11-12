@@ -1,0 +1,424 @@
+/* =========================
+   GLOBAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #102b4e;
+    --secondary: #1c426c;
+    --accent: #e4ad48;
+    --light: #f4f7fa;
+    --white: #ffffff;
+    --text: #526174;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* =========================
+   HEADER AND NAVIGATION
+========================= */
+
+.header {
+    background: var(--white);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--primary);
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.nav-button {
+    background: var(--primary);
+    color: var(--white) !important;
+    padding: 11px 22px;
+    border-radius: 6px;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 28px;
+    color: var(--primary);
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    background: linear-gradient(120deg, #102b4e, #1c426c);
+    color: var(--white);
+    padding: 100px 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text h1 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.hero-text p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: #e1e8f0;
+}
+
+.hero-text .button {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--primary);
+    padding: 14px 27px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.visual-card {
+    background: var(--white);
+    color: var(--primary);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.visual-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+.introduction {
+    padding: 85px 0;
+    text-align: center;
+}
+
+.introduction h2 {
+    color: var(--primary);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.introduction p {
+    max-width: 750px;
+    margin: auto;
+}
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+section h2 {
+    color: var(--primary);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   OPPORTUNITIES
+========================= */
+
+.opportunities {
+    background: var(--light);
+    padding: 85px 0;
+}
+
+.opportunity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.opportunity-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    transition: 0.3s;
+}
+
+.opportunity-card:hover {
+    transform: translateY(-7px);
+}
+
+.opportunity-card h3 {
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+/* =========================
+   LEARNING SECTION
+========================= */
+
+.learning {
+    padding: 85px 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background: var(--light);
+    padding: 28px 20px;
+    border-radius: 9px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.skill-card h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.skill-card:hover h3 {
+    color: var(--white);
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.how-it-works {
+    background: var(--light);
+    padding: 85px 0;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.steps-grid > div {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.steps-grid h3 {
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    padding: 85px 0;
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* =========================
+   CALL TO ACTION
+========================= */
+
+.cta {
+    background: var(--primary);
+    color: var(--white);
+    padding: 75px 20px;
+    text-align: center;
+}
+
+.cta h2 {
+    color: var(--white);
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    margin-bottom: 25px;
+}
+
+.cta a {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--primary);
+    padding: 13px 27px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #091d35;
+    color: #d5deea;
+    padding: 35px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: var(--accent);
+}
+
+/* =========================
+   TABLET RESPONSIVENESS
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .opportunity-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        padding: 25px;
+        gap: 22px;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .opportunity-grid,
+    .skills-grid,
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .introduction,
+    .opportunities,
+    .learning,
+    .how-it-works,
+    .about {
+        padding: 60px 0;
+    }
+
+  }
